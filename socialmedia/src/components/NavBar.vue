@@ -14,7 +14,7 @@
       </v-btn>
 
       <v-btn icon>
-        <v-icon>mdi-filter</v-icon>
+        <router-link to="/cred"><v-icon>mdi-filter</v-icon></router-link>
       </v-btn>
 
       <v-btn icon>

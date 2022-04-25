@@ -20,19 +20,6 @@ export default {
     Cards,
   },
   methods: {
-    async addCard(card) {
-      const res = await fetch('api/cards', {
-        method: 'POST',
-        headers: {
-          'Content-type': 'application/json',
-        },
-        body: JSON.stringify(card),
-      })
-
-      const data = await res.json() 
-
-      this.cards = [...this.cards, data]
-    },
     async deleteCards(id) {
       if (confirm('Are you sure?')) {
         const res = await fetch(`api/cards/${id}`, {

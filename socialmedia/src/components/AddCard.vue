@@ -26,11 +26,17 @@ export default {
                     return
                 }
 
+                if (sessionStorage.getItem('userID') == null) {
+                    alert('Please sign in.')
+                    return
+                }
+
                 const newCard = {
                     // id: Math.floor(Math.random() * 100000),
                     title: this.title,
                     desc: this.desc,
                     content: this.content,
+                    postUserID: sessionStorage.getItem('userID')
                 }
 
                 this.$emit('add-card', newCard);

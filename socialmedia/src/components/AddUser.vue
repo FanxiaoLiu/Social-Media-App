@@ -14,7 +14,8 @@ export default {
         return {
             name: '',
             email: '',
-            password: ''
+            password: '',
+            followers: ''
         }
     },
     methods: {
@@ -31,6 +32,7 @@ export default {
                     name: this.name,
                     email: this.email,
                     password: this.password,
+                    followers: ''
                 }
 
                 this.$emit('add-user', newUser);
